@@ -3,35 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
   <title>Frontend Mentor | Space tourism website</title>
 </head>
-<body>
+<body class="destination">
+    <header>
+        <button class="mobile-menu-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+        </button>
+        <nav class="flex header-nav">
+            <div>
+                <img src="assets/shared/logo.svg" alt="logo">
+            </div>
+            <ul id="primary-navigation" data-visibility="false" class="flex primary-nav">
+                <li class="nav-item">
+                    <a href="index.html">
+                        <span>00</span>Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="destination-moon.html">
+                        <span>01</span>Destination
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <span>02</span>Crew
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <span>03</span>Technology
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+      <section class="flex destination-section">
+        <section class="destination-image-section">
+          <div>            
+            <h1><span>01</span>Pick your destination</h1>
+          </div>
+          <img src="assets/destination/image-moon.png">
+        </section>
+        <section class="selected-destination-details">
+          <section class="selected-destination">
+            <nav>
+              <ul class="flex destination-list">
+                <li>Moon</li>
+                <li>Mars</li>
+                <li>Europa</li>
+                <li>Titan</li>
+              </ul>
+            </nav>
+            <h2>Moon</h2>
+      
+            <p>
+              See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+              regain perspective and come back refreshed. While you’re there, take in some history 
+              by visiting the Luna 2 and Apollo 11 landing sites.
+            </p>
+          </section>
+          <hr class="destination-section-separator">
+          <section class="flex selected-destination-info">
+            <div id="distance-info">
+              <p>Avg. distance</p>
+              <h3>384,400 km</h3>
+            </div>
+            <div id="travel-info">
+              <p>Est. travel time</p>
+              <h3>3 days</h3>
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
-
-  01 Pick your destination
-
-  Moon
-  Mars
-  Europa
-  Titan
-
-  Moon
-
-  See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
-  regain perspective and come back refreshed. While you’re there, take in some history 
-  by visiting the Luna 2 and Apollo 11 landing sites.
-
-  Avg. distance
-  384,400 km
-
-  Est. travel time
-  3 days
 </body>
 </html>
