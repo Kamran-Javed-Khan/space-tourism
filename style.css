@@ -48,11 +48,19 @@ body {
 .primary-nav {
     margin: 0;
     list-style: none;
-    background: hsl(0 0% 100% / 0.1);
-    backdrop-filter: blur(1rem);
+    background: hsl(0 0% 0% / 0.8);
     font-family: var(--ff-sans-cond);
     letter-spacing: 2px;
 }
+
+@supports(backdrop-filter: none) {
+    .primary-nav {
+        backdrop-filter: blur(1rem);
+        background: hsl(0 0% 30% / 0.1);
+    }
+}
+
+#space-tourism-logo { cursor: pointer; }
 
 .mobile-menu-toggle {display: none;}
 
@@ -126,6 +134,7 @@ body {
     text-transform: uppercase;
     font-family: var(--ff-serif);
     font-size: var(--fs-700);
+    color: black;
     width: 15rem;
     height: 15rem;
     border-radius: 50%;
@@ -134,13 +143,15 @@ body {
 
 /* destination */
 
-.destination-section {
+    .destination-section {
     align-items: center;
     justify-content: center;
     font-family: var(--ff-sans-normal);
     gap: 3rem;
     padding: 2rem 3rem;
 }
+
+.destination-image-width { width: 100%; }
 
 .selected-destination-details { width: min-content; }
 
@@ -165,17 +176,28 @@ body {
     padding: 0;
 }
 
+.selected-destination-title {
+    height: 3px;
+    box-shadow: 0 25px 0 0 #fff;
+    border-radius: 10px;
+}
+
 .destination-list > li {
     justify-content: space-between;
     text-transform: uppercase;
     letter-spacing: 2px;
+    color: var(--heading-color);
+    font-weight: var(--fw-bold);
+    cursor: pointer;
 }
 
-.selected-destination > h2 {
+.selected-destination h2 {
     font-family: var(--ff-serif);
     font-weight: var(--fw-regular);
     font-size: var(--fs-900);
 }
+
+#destination-paragraph { font-weight: var(--fw-bold); }
 
 .destination-section-separator {
     border-bottom: 1px;
@@ -218,7 +240,7 @@ body {
     .mobile-menu-toggle {
         position: absolute;
         display: block;
-        top: 2rem;
+        top: 2.5rem;
         right: 2rem;
         z-index: 100;
         border: none;

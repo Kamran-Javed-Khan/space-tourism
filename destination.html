@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
   <script src="script.js" defer></script>
+  <script src="destinationSwitcher.js" defer></script>
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body class="destination">
@@ -16,7 +17,7 @@
         </button>
         <nav class="flex header-nav">
             <div>
-                <img src="assets/shared/logo.svg" alt="logo">
+              <img id="space-tourism-logo" src="assets/shared/logo.svg" alt="Space Tourism Logo">
             </div>
             <ul id="primary-navigation" data-visibility="false" class="flex primary-nav">
                 <li class="nav-item">
@@ -25,7 +26,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="destination-moon.html">
+                    <a href="destination.html">
                         <span>01</span>Destination
                     </a>
                 </li>
@@ -48,21 +49,21 @@
           <div>            
             <h1><span>01</span>Pick your destination</h1>
           </div>
-          <img src="assets/destination/image-moon.png">
+          <img id="destination-image" class="destination-image-width" src="assets/destination/image-moon.png">
         </section>
         <section class="selected-destination-details">
           <section class="selected-destination">
             <nav>
               <ul class="flex destination-list">
-                <li>Moon</li>
-                <li>Mars</li>
-                <li>Europa</li>
-                <li>Titan</li>
+                <li tabindex="0" role="tablist" class="selected-destination-title">Moon</li>
+                <li tabindex="0" role="tablist">Mars</li>
+                <li tabindex="0" role="tablist">Europa</li>
+                <li tabindex="0" role="tablist">Titan</li>
               </ul>
             </nav>
-            <h2>Moon</h2>
+            <h2 id="destination-title">Moon</h2>
       
-            <p>
+            <p id="destination-paragraph">
               See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
               regain perspective and come back refreshed. While you’re there, take in some history 
               by visiting the Luna 2 and Apollo 11 landing sites.
@@ -72,11 +73,11 @@
           <section class="flex selected-destination-info">
             <div id="distance-info">
               <p>Avg. distance</p>
-              <h3>384,400 km</h3>
+              <h3 id="destination-distance">384,400 km</h3>
             </div>
             <div id="travel-info">
               <p>Est. travel time</p>
-              <h3>3 days</h3>
+              <h3 id="destination-travel-time">3 days</h3>
             </div>
           </section>
         </section>
