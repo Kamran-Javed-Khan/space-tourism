@@ -1,6 +1,7 @@
 const primaryNav = document.querySelector('.primary-nav');
 const mobileNavToggle = document.querySelector('.mobile-menu-toggle');
 const spaceTourismLogo = document.querySelector('#space-tourism-logo');
+const exploreBtn = document.querySelector('#explore-button');
 
 mobileNavToggle.addEventListener('click', openCloseNav => {
     const visibility = primaryNav.getAttribute('data-visibility');
@@ -15,4 +16,8 @@ mobileNavToggle.addEventListener('click', openCloseNav => {
 
 spaceTourismLogo.addEventListener('click', navToHome => {
     window.location.href = 'index.html';
+});
+
+exploreBtn.addEventListener('click', navToDestinations => {
+    window.location.href = 'destinations.html';
 });
