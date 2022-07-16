@@ -1,6 +1,5 @@
 const primaryNav = document.querySelector('.primary-nav');
 const mobileNavToggle = document.querySelector('.mobile-menu-toggle');
-
 const spaceTourismLogo = document.querySelector('#space-tourism-logo');
 
 mobileNavToggle.addEventListener('click', openCloseNav => {

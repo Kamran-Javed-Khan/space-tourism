@@ -67,7 +67,6 @@ body {
 .primary-nav a {
     text-decoration: none;
     color: white;
-    margin-inline-end: 2rem;
 }
 
 .primary-nav span {
@@ -83,6 +82,7 @@ body {
 
 .nav-item {
     text-transform: uppercase;
+    margin-inline-end: 2rem;
 }
 
 .sr-only {
@@ -180,6 +180,8 @@ body {
     height: 3px;
     box-shadow: 0 25px 0 0 #fff;
     border-radius: 10px;
+    -webkit-box-shadow: 0 25px 0 0 #fff;
+    -moz-box-shadow: 0 25px 0 0 #fff;
 }
 
 .destination-list > li {
@@ -319,4 +321,12 @@ body {
     .destination-section { padding-inline: 5rem; }
 
     .selected-destination-info { gap: 3rem;}
+
+    .current-location {
+        height: 3px;
+        box-shadow: 0 52px 0 0 #fff;
+        border-radius: 10px;
+        -webkit-box-shadow: 0 52px 0 0 #fff;
+        -moz-box-shadow: 0 52px 0 0 #fff;
+    }
 }
