@@ -40,6 +40,7 @@ body {
 
 .home { background-image: url(./assets/home/background-home-mobile.jpg); }
 .destination { background-image: url(./assets/destination/background-destination-mobile.jpg); }
+.crew { background-image: url(./assets/crew/background-crew-mobile.jpg); }
 
 .flex {
     display: flex;
@@ -149,7 +150,7 @@ body {
     justify-content: center;
     font-family: var(--ff-sans-normal);
     gap: 3rem;
-    padding: 2rem 3rem;
+    padding: 1rem;
 }
 
 .destination-image-width { width: 100%; }
@@ -163,7 +164,7 @@ body {
     font-size: var(--fs-700);
 }
 
-.destination-image-section h1 > span {
+.destination-image-section h1 > span, #crew-header > span {
     font-weight: var(--fw-bold);
     color: var(--heading-color);
     padding-inline-end: 0.5rem;
@@ -225,6 +226,74 @@ body {
     font-weight: var(--fw-regular);
 }
 
+/* crew */
+.crew-section {
+    padding: 1rem 1rem;
+    display: grid;
+    place-content: center;
+}
+
+.crew-section h1, h2, h3 { margin: 0; }
+
+.crew-info {
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    gap: 3rem;
+}
+
+.crew-info-headers {
+    padding-block: 1rem;
+}
+
+#crew-header, .crew-info > h2, h3 {
+    text-transform: uppercase;
+}
+
+#crew-member-name {
+    font-family: var(--ff-serif);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-800);
+}
+
+#crew-designation {
+    font-family: var(--ff-serif);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-700);
+    color: var(--heading-color);
+}
+
+#crew-member-description {
+    font-family: var(--ff-sans-normal);
+    font-weight: var(--fw-semi-bold);
+    width: 50ch;
+}
+
+.crew-data {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.crew-selector {
+    display: flex;
+    gap: 1em;
+}
+
+.crew-selector > button {
+    padding: 0.5em;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--heading-color);
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#selected-crew-member {
+    background-color: white;
+    opacity: 1;
+}
+
 @media (max-width: 560px) {
     .primary-nav {
         position: fixed;
@@ -258,12 +327,25 @@ body {
     }
 
     .home-section { padding-inline: 2rem; }
+
+    .crew-info {
+        flex-direction: column-reverse;
+    }
+
+    #crew-member-description { width: 40ch; }
+
+    .crew-data {
+        flex-flow: column-reverse;
+        gap: 1rem;
+    }
 }
 
 @media (min-width: 560px) and (max-width: 880px) {
     .primary-nav a > span { display: none; }
 
     .home-section { padding-inline: 8rem; }
+
+    .crew-section { position: relative; }
 }
 
 @media (min-width: 560px) {
@@ -300,6 +382,31 @@ body {
     .destination-list {
         justify-content: space-between;
     }
+
+    /* crew */
+    .crew-section {
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .crew-info {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    #crew-member-image { width: 60%; }
+
+    .crew-selector > button { padding: 0.4em; }
+
+    #crew-designation {
+        font-size: var(--fs-600);
+    }
+
+    #crew-member-name {
+        font-size: var(--fs-700);
+    }
+
+    .crew-selector { justify-content: center; }
 }
 
 @media (min-width: 35rem) {
@@ -312,12 +419,19 @@ body {
         background-position: center center;
         background-image: url(./assets/destination/background-destination-tablet.jpg);
     }
+
+    .crew {
+        background-position: center center;
+        background-image: url(./assets/crew/background-crew-tablet.jpg);
+    }
 }
 
 @media (min-width: 45rem) {
     .home { background-image: url(./assets/home/background-home-desktop.jpg); }
 
     .destination { background-image: url(./assets/destination/background-destination-desktop.jpg); }
+
+    .crew { background-image: url(./assets/crew/background-crew-desktop.jpg); }
 
     .destination-section { padding-inline: 5rem; }
 
@@ -330,4 +444,14 @@ body {
         -webkit-box-shadow: 0 52px 0 0 #fff;
         -moz-box-shadow: 0 52px 0 0 #fff;
     }
+
+    .crew-section { padding: 1.5rem 5rem 0; }
+
+    .crew-info {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 280px) {
+    #crew-member-description { width: 28ch; }
 }

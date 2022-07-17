@@ -18,6 +18,8 @@ spaceTourismLogo.addEventListener('click', navToHome => {
     window.location.href = 'index.html';
 });
 
-exploreBtn.addEventListener('click', navToDestinations => {
-    window.location.href = 'destinations.html';
-});
+if (exploreBtn) {
+    exploreBtn.addEventListener('click', navToDestinations => {
+        window.location.href = 'destinations.html';
+    });
+}
