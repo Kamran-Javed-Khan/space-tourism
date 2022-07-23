@@ -33,6 +33,11 @@ const imageMobile = document.querySelector('#tech-image-mobile');
 
 btns.forEach(btn => {
     btn.addEventListener('click', switchTechnology);
+    btn.addEventListener("keyup", function(event) {
+      if (event.key === "Enter") {
+        switchTechnology(event);
+      }
+  });
 });
 
 function switchTechnology(e) {
