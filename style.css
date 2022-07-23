@@ -361,8 +361,6 @@ header { z-index: 1000; }
 
 .tech-section {
     overflow: hidden;
-    display: grid;
-    place-content: center;
 }
 
 .tech-section > h1 {
@@ -588,6 +586,11 @@ header { z-index: 1000; }
 
     .crew-info {
         flex-wrap: wrap;
+    }
+
+    .tech-section {
+        display: grid;
+        place-content: center;
     }
 }
 
