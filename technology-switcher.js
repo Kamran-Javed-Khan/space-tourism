@@ -28,7 +28,8 @@ const technology = [
 const btns = document.querySelectorAll('.tech-btns button');
 const name = document.querySelector('#tech-name');
 const desc = document.querySelector('#tech-desc');
-const image = document.querySelector('#tech-image');
+const imageDesktop = document.querySelector('#tech-image-desktop');
+const imageMobile = document.querySelector('#tech-image-mobile');
 
 btns.forEach(btn => {
     btn.addEventListener('click', switchTechnology);
@@ -43,7 +44,8 @@ function switchTechnology(e) {
     const ind = technology.findIndex(item => item.name.toLowerCase().includes(tech));
     if (ind > -1) {
         name.innerText = technology[ind].name;
-        image.setAttribute('src', technology[ind].images.portrait);
+        imageDesktop.srcset = technology[ind].images.portrait;
+        imageMobile.srcset = technology[ind].images.landscape;
         desc.innerText = technology[ind].description;
         target.id = 'tech-active';
     }
